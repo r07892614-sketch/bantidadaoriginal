@@ -1,0 +1,152 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #001f3f, #0074d9, #00c6ff);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  padding: 30px 25px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 198, 255, 0.4);
+  animation: slideIn 1.5s ease;
+}
+
+/* ===== TITLE ===== */
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #00ffff, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+/* ===== SUBS ===== */
+.subs {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+
+/* ===== INFO ===== */
+.info p {
+  font-size: 0.95rem;
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+.pass {
+  color: #00e6ff;
+  font-weight: 600;
+}
+
+/* ===== TIMER ===== */
+.timer-box {
+  margin: 25px 0;
+}
+
+.wait {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+#countdown {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00ffff;
+  margin: 8px 0;
+}
+
+.seconds {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* ===== JOIN BUTTON ===== */
+.join-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff0077, #ffcc00);
+  color: #ffffff;
+  padding: 14px 38px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  animation: fadePulse 1.6s infinite alternate;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+}
+
+.join-btn:hover {
+  transform: scale(1.08);
+}
+
+/* ===== PROMOTION ===== */
+.promotion {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ffd700;
+}
+
+.promotion span {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadePulse {
+  from {
+    opacity: 0.6;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  }
+  to {
+    opacity: 1;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+  #countdown {
+    font-size: 2.6rem;
+  }
+  .join-btn {
+    padding: 12px 30px;
+  }
+}
